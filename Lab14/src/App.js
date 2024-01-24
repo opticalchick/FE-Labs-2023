@@ -116,7 +116,27 @@
 
 /* -- ALL YOUR COMPONENT/STYLE IMPORTS HERE -- */
 import './App.css'
+import Appointments from './Appointments'
 import Nav from './Nav'
+
+let allCustomers = [
+  {
+    firstName: 'Shawn',
+    lastName: 'Lennon',
+    appointmentTime: '1:00PM',
+  },
+  {
+    firstName: 'Jewel',
+    lastName: 'Ronnie',
+    appointmentTime: '2:00PM',
+  },
+  {
+    firstName: 'Martie',
+    lastName: 'Francis',
+    appointmentTime: '3:00PM',
+  },
+]
+
 
 let date = new Date()
 
@@ -133,8 +153,9 @@ function App() {
         <h1>Welcome, {singleUser.name}</h1>
         <p>Todays date is: {singleUser.todaysDate}</p>
       </section>
+      <Appointments customers={allCustomers} />
     </div>
   )
 }
 
-export default App
+export default App;
